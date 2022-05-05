@@ -5,7 +5,7 @@ typedef struct node {
     struct node* next;
 } node_t;
 node_t* allocate_node(int data) {
-    node_t *a = (node_t*)malloc(sizeof(node_t));
+    node_t* a = (node_t*)malloc(sizeof(node_t));
     a->data = data;
     a->next = NULL;
     return a;
@@ -19,13 +19,13 @@ void show_list(node_t* list) {
     printf("NULL\n");
 }
 node_t* append_node(node_t* list, int new_data) {
-    node_t *node = allocate_node(new_data);
+    node_t* node = allocate_node(new_data);
     node->data = new_data;
     node->next = NULL;
     if (list == NULL) {
         list = node;
     } else {
-        node_t *lastnode = list;
+        node_t* lastnode = list;
         while (lastnode->next != NULL) {
             lastnode = lastnode->next;
         }
