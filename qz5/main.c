@@ -35,11 +35,11 @@ node_t* append_node(node_t* list, int new_data) {
 }
 void free_all_node(node_t* list) {
     node_t* tmp ;
-    while ((list->next) !=NULL){
-        tmp = list->next;
+    while (list !=NULL){
+        tmp = list;
+        list = list->next;
         printf("free([%d])->", tmp->data);
-        free(list);
-        list = tmp;
+        free(tmp);
     }
     printf("NULL\n");
 }
@@ -58,3 +58,4 @@ int main()
 
     return 0;
 }
+
