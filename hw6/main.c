@@ -55,8 +55,8 @@ node_t* del_node(node_t* head, int n) {
     for (int i = 0; i < n; i++) {
         p = p->next;
     }
-    while (previous_node->next != p) {
-        pre = previous_node->next;
+    while (pre->next != p) {
+        pre = pre->next;
     }
     pre->next = p->next;
     free(p);
