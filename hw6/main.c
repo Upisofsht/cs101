@@ -58,7 +58,7 @@ node_t* del_node(node_t* head, int n) {
     }
     node_t* p = head;
     node_t* previous_node = head;
-    for (int num = 0; num < n; num++) {
+    for (int i = 0; i < n; i++) {
         p = p->next;
     }
     while (previous_node->next != p) {
