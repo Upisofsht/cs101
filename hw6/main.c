@@ -48,12 +48,6 @@ node_t* add_node(node_t* head, int new_deta) {
 }
 node_t* del_node(node_t* head, int n) {
     if (n == 0) {
-        node_t* next = head->next;
-        while (head->next) {
-            head->data = next->data;
-            head->next = next->next;
-            head = next;
-        }
         return head;
     }
     node_t* p = head;
