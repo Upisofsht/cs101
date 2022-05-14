@@ -60,7 +60,7 @@ node_t* del_node(node_t* head, int n) {
     }
     pre->next = p->next;
     free(p);
-    return pre_node;
+    return pre;
 }
 int main()
 {
