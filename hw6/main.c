@@ -51,16 +51,16 @@ node_t* del_node(node_t* head, int n) {
         return head;
     }
     node_t* p = head;
-    node_t* previous_node = head;
+    node_t* pre = head;
     for (int i = 0; i < n; i++) {
         p = p->next;
     }
     while (previous_node->next != p) {
-        previous_node = previous_node->next;
+        pre = previous_node->next;
     }
-    previous_node->next = p->next;
+    pre->next = p->next;
     free(p);
-    return previous_node;
+    return pre_node;
 }
 int main()
 {
