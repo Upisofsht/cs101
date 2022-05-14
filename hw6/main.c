@@ -77,7 +77,7 @@ int main()
     show_list(head);
     head = add_node(head, -1);
     show_list(head);
-    head = del_node(head, 1);
+    del_node(head, 1);
     show_list(head);
     free_all_node(head);
 
