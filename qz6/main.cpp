@@ -42,14 +42,12 @@ class MilitaryClock : Clock {
         }
 };
 
-int main()
-{
+int main() {
     Clock cc(10, 25, 43, "AM");
     StandardClock sc(10, 25, 43, "AM");
     MilitaryClock mc(10, 25, 43, "PM");
     cc.display();
     sc.display();
     mc.display();
-
     return 0;
 }
