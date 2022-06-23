@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct LinkedList{
+typedef struct LinkedList {
     char data;
     struct LinkedList *next;
 }LinkedList;
 
-LinkedList* allocNode(int data){
+LinkedList* allocNode(int data) {
     LinkedList* a = (LinkedList*)malloc(sizeof(LinkedList*));
     a -> data = data;
     a -> next = NULL;
@@ -14,27 +14,27 @@ LinkedList* allocNode(int data){
     return a;
 }
 
-void showList(LinkedList* list){
-    while(list != NULL){
+void showList(LinkedList* list) {
+    while(list != NULL) {
         printf("[%c]->",list->data);
         list = list -> next;
     }
     printf("null\n");
 }
 
-LinkedList* appendList(LinkedList* list, char new_data){
+LinkedList* appendList(LinkedList* list, char new_data) {
     LinkedList* at = list;
     LinkedList* pre = NULL;
     LinkedList* a = allocNode(new_data);
 
-    while(at!=NULL){
+    while(at!=NULL) {
         pre = at;
         at = at -> next;
     }
 
-    if(pre!=NULL){
+    if(pre!=NULL) {
         pre -> next = a;
-    }else{
+    }else {
         list = a;
     }
     
@@ -52,8 +52,6 @@ LinkedList* reverseList(LinkedList* list) {
     prev = current;
     current = next;
   }
-  
-  
   return prev;
 }
 
