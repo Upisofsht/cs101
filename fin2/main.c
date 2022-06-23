@@ -42,17 +42,17 @@ LinkedList* appendList(LinkedList* list, char new_data) {
 }
 
 LinkedList* reverseList(LinkedList* list) {
-  LinkedList* prev = NULL;
-  LinkedList* current = list;
-  LinkedList* next = NULL;
+    LinkedList* prev = NULL;
+    LinkedList* current = list;
+    LinkedList* next = NULL;
   
-  while (current != NULL) {
+    while (current != NULL) {
     next = current -> next;
     current -> next = prev;
     prev = current;
     current = next;
-  }
-  return prev;
+    }
+    return prev;
 }
 
 int main(){
